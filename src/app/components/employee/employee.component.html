@@ -1,0 +1,32 @@
+<div class="row text-center">
+  <div class="col-12 text-uppercase text-default">
+    <h4>Employee List</h4>
+  </div>
+</div>
+<br />
+<div class="row">
+  <div class="col-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>EmpCode</th>
+          <th>EmpName</th>
+          <th>Email Id</th>
+          <th>Designation</th>
+          <th>Role</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (item of this.empList; track $index) {
+        <tr>
+          <td>{{ item.empCode }}</td>
+          <td>{{ item.empName }}</td>
+          <td>{{ item.empEmailId }}</td>
+          <td>{{ item.empDesignation }}</td>
+          <td>{{ item.role }}</td>
+        </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</div>
