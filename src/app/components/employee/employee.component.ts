@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CommonModule, formatCurrency } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IEmployee } from '../../model/interface/IEmployee';
+import { Employee } from '../../model/class/Employee';
 
 @Component({
   selector: 'app-employee',
@@ -13,6 +14,7 @@ import { IEmployee } from '../../model/interface/IEmployee';
 })
 export class EmployeeComponent implements OnInit {
   empList: IEmployee[] = [];
+  empObj: Employee = new Employee();
 
   http = inject(HttpClient);
 

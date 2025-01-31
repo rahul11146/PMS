@@ -126,16 +126,31 @@
               <td>{{ item.contactNo }}</td>
               <td>{{ item.city }}</td>
               <td>
-                <div class="row">
+                <span
+                  (click)="onEditClient(item)"
+                  style="cursor: pointer"
+                  class="text text-default"
+                >
+                  <i class="fa fa-edit"></i>
+                </span>
+                &nbsp;
+                <span
+                  (click)="onDeleteClient(item.clientId)"
+                  style="cursor: pointer"
+                  class="text text-danger"
+                >
+                  <i class="fa fa-trash"></i>
+                </span>
+
+                <!-- <div class="row">
                   <div class="col-6">
-                    <button
-                      type="button"
-                      class="btn btn-sm btn-info"
+                    <span
                       (click)="onEditClient(item)"
                     >
-                      Edit
-                    </button>
+                      <i class="fa fa-edit"></i>
+                  </span>
                   </div>
+
                   <div class="col-6">
                     <button
                       type="button"
@@ -145,7 +160,7 @@
                       Delete
                     </button>
                   </div>
-                </div>
+                </div> -->
               </td>
             </tr>
             }

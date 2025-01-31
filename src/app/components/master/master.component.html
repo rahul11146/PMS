@@ -1,17 +1,22 @@
 <div class="row">
   <div class="col-12 text-center">
-    <div class="btn-group">
-      <button>Roles</button>
-      <button>Designation</button>
+    <div class="btn-group btn-primary">
+      <button type="button" (click)="showList('Role')">Roles</button>
+      <button type="button" (click)="showList('Desig')">Designation</button>
     </div>
   </div>
-
+  <br />
+  <br />
+  <br />
   <div class="row">
+    @if(isRole) {
     <div class="col-12">
       <app-roles></app-roles>
     </div>
+    } @else if(isDesignation) {
     <div class="col-12">
       <app-designation></app-designation>
     </div>
+    }
   </div>
 </div>

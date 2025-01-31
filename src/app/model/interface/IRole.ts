@@ -8,3 +8,8 @@ export interface APIResponseModel {
   result: boolean;
   data: any;
 }
+
+export interface IDesignation {
+  designationid: number;
+  designation: string;
+}
