@@ -1,1 +1,72 @@
-<p>client-project works!</p>
+<div class="row">
+  <div class="col-6">
+    <div class="row text-center">
+      <div class="col-12 text-uppercase text-default">
+        <h4>Client Project List</h4>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+      <div class="col-12">
+        <table class="table" style="width: 100% !important">
+          <thead>
+            <tr>
+              <th>Sr No</th>
+              <th>Emp Name</th>
+              <th>Project Name</th>
+              <th>Client Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            @for (item of this.ClientProjectList; track $index) {
+            <tr>
+              <td>{{ $index + 1 }}</td>
+              <td>{{ item.empName }}</td>
+              <td>{{ item.projectName }}</td>
+              <td>{{ item.clientName }}</td>
+              <td>
+                <!-- <span
+                  (click)="onEditClient(item)"
+                  style="cursor: pointer"
+                  class="text text-default"
+                >
+                  <i class="fa fa-edit"></i>
+                </span>
+                &nbsp;
+                <span
+                  (click)="onDeleteClient(item.clientId)"
+                  style="cursor: pointer"
+                  class="text text-danger"
+                >
+                  <i class="fa fa-trash"></i>
+                </span> -->
+
+                <!-- <div class="row">
+                    <div class="col-6">
+                      <span
+                        (click)="onEditClient(item)"
+                      >
+                        <i class="fa fa-edit"></i>
+                    </span>
+                    </div>
+  
+                    <div class="col-6">
+                      <button
+                        type="button"
+                        class="btn btn-sm btn-danger"
+                        (click)="onDeleteClient(item.clientId)"
+                      >
+                        Delete
+                      </button>
+                    </div>
+                  </div> -->
+              </td>
+            </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
